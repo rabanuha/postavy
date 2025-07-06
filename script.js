@@ -39,18 +39,18 @@ for (let i = 0 ; i < timeArray.length; i++) {
     }
 }
 
-// if (navigator.geolocation) {
-//   navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-// } else {
-//   // Геолокация не поддерживается
-//  alert("Geolocation is not supported by this browser.");
-// }
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+} else {
+  // Геолокация не поддерживается
+ alert("Geolocation is not supported by this browser.");
+}
 
-// function successCallback(position) {
-//   const latitude = position.coords.latitude;
-//   const longitude = position.coords.longitude;
-//   alert("Latitude: " + latitude + ", Longitude: " + longitude);
-// }
+function successCallback(position) {
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+  alert("Latitude: " + latitude + ", Longitude: " + longitude);
+}
 
 // function errorCallback(error) {
 //   switch (error.code) {
