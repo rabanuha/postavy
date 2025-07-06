@@ -11,7 +11,7 @@ if (navigator.geolocation) {
 function successCallback(position) {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
-  console.log("Latitude: " + latitude + ", Longitude: " + longitude);
+  alert("Latitude: " + latitude + ", Longitude: " + longitude);
 }
 
 function errorCallback(error) {
