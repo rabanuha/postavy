@@ -3,8 +3,6 @@ const currentTime = new Date();
 const currentHour = currentTime.getHours();
 const currentMinute = currentTime.getMinutes();
 
-alert("часы: " + currentHour + ", минуты: " + currentMinute);
-
 const timeArray = [
   { hour: 7, minute: 3 },
   { hour: 7, minute: 33 },
@@ -27,17 +25,7 @@ const timeArray = [
   { hour: 18, minute: 43 },
 ];
 
-for (let i = 0 ; i < timeArray.length; i++) {
-    if ( currentHour == timeArray[i].hour && (currentMinute < timeArray[i].minute) ) {
-      let minuteForBus = timeArray[i].minute - currentMinute;
-      alert( 'Маршрут №1 \nдо ближайшего автобуса: ' + minuteForBus + ' минут');
-      break;
-    } else if (currentHour < timeArray[i].hour) {
-      let minuteForBus = (60 - currentMinute) + timeArray[i].minute;
-      alert('Маршрут №1 \nдо ближайшего автобуса: ' + minuteForBus + ' минут');
-      break;
-    }
-}
+
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
@@ -67,4 +55,16 @@ function errorCallback(error) {
       alert("An unknown error occurred.");
       break;
   }
+}
+
+for (let i = 0 ; i < timeArray.length; i++) {
+    if ( currentHour == timeArray[i].hour && (currentMinute < timeArray[i].minute) ) {
+      let minuteForBus = timeArray[i].minute - currentMinute;
+      alert( 'Маршрут №1 \nдо ближайшего автобуса: ' + minuteForBus + ' минут');
+      break;
+    } else if (currentHour < timeArray[i].hour) {
+      let minuteForBus = (60 - currentMinute) + timeArray[i].minute;
+      alert('Маршрут №1 \nдо ближайшего автобуса: ' + minuteForBus + ' минут');
+      break;
+    }
 }
