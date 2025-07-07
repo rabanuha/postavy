@@ -43,7 +43,7 @@ function successCallback(position) {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
   const foundObject = findObject(busStop, 'loc', latitude);
-
+if (foundObject) {
   for (let i = 0 ; i < foundObject.timeArrivalBus1.length; i++) {
       if ( currentHour == foundObject.timeArrivalBus1.hour && (currentMinute < foundObject.timeArrivalBus1.minute) ) {
         let minuteForBus = foundObject.timeArrivalBus1[i].minute - currentMinute;
@@ -57,7 +57,11 @@ function successCallback(position) {
   }
 
   
+} else {
+  alert("Подойдите к остановке");
 }
+}
+  
 
 function errorCallback(error) {
   switch (error.code) {
