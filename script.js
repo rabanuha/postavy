@@ -42,6 +42,7 @@ function successCallback(position) {
 
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
+  alert(latitude);
   const foundObject = findObject(busStop, 'loc', latitude);
 if (foundObject) {
   for (let i = 0 ; i < foundObject.timeArrivalBus1.length; i++) {
