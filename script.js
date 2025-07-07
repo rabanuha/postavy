@@ -1,8 +1,10 @@
+
 const currentTime = new Date();
 const currentHour = currentTime.getHours();
 const currentMinute = currentTime.getMinutes();
+
 const busStop = [
-  {name: 'ПТУ', loc: 55.1178117, timeArrivalBus1: [
+  {name: 'ПТУ', loc: 54.51256, timeArrivalBus1: [
   { hour: 7, minute: 3 },
   { hour: 7, minute: 33 },
   { hour: 8, minute: 38 },
@@ -45,29 +47,14 @@ function successCallback(position) {
   for (let i = 0 ; i < foundObject.timeArrivalBus1.length; i++) {
       if ( currentHour == foundObject.timeArrivalBus1.hour && (currentMinute < foundObject.timeArrivalBus1.minute) ) {
         let minuteForBus = foundObject.timeArrivalBus1[i].minute - currentMinute;
-        alert('Ваша остановка ' + foundObject.name + '\nМаршрут №1 \nДо ближайшего автобуса: ' + minuteForBus + ' минут');
+        alert('Ваша остановка ' + foundObject.name + '\nМаршрут №1 \nдо ближайшего автобуса: ' + minuteForBus + ' минут');
         break;
       } else if (currentHour < foundObject.timeArrivalBus1[i].hour) {
         let minuteForBus = (60 - currentMinute) + foundObject.timeArrivalBus1[i].minute;
         alert('Ваша остановка ' + foundObject.name + '\nМаршрут №1 \nдо ближайшего автобуса: ' + minuteForBus + ' минут');
         break;
       }
-  }  
-}
-
-function errorCallback(error) {
-  switch (error.code) {
-    case error.PERMISSION_DENIED:
-      alert("User denied the request for Geolocation.");
-      break;
-    case error.POSITION_UNAVAILABLE:
-      alert("Location information is unavailable.");
-      break;
-    case error.TIMEOUT:
-      alert("The request to get user location timed out.");
-      break;
-    case error.UNKNOWN_ERROR:
-      alert("An unknown error occurred.");
-      break;
   }
+
+  
 }
