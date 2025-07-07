@@ -4,7 +4,7 @@ const currentHour = currentTime.getHours();
 const currentMinute = currentTime.getMinutes();
 
 const busStop = [
-  {name: 'ПТУ', loc: 54.51256, timeArrivalBus1: [
+  {name: 'ПТУ', loc: 55.1178191, timeArrivalBus1: [
   { hour: 7, minute: 3 },
   { hour: 7, minute: 33 },
   { hour: 8, minute: 38 },
