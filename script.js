@@ -43,7 +43,7 @@ function successCallback(position) {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
   const foundObject = findObject(busStop, 'loc', latitude);
-  consol.log(foundObject);
+
   for (let i = 0 ; i < foundObject.timeArrivalBus1.length; i++) {
       if ( currentHour == foundObject.timeArrivalBus1.hour && (currentMinute < foundObject.timeArrivalBus1.minute) ) {
         let minuteForBus = foundObject.timeArrivalBus1[i].minute - currentMinute;
@@ -58,3 +58,22 @@ function successCallback(position) {
 
   
 }
+
+function errorCallback(error) {
+  switch (error.code) {
+    case error.PERMISSION_DENIED:
+      alert("User denied the request for Geolocation.");
+      break;
+    case error.POSITION_UNAVAILABLE:
+      alert("Location information is unavailable.");
+      break;
+    case error.TIMEOUT:
+      alert("The request to get user location timed out.");
+      break;
+    case error.UNKNOWN_ERROR:
+      alert("An unknown error occurred.");
+      break;
+  }
+}
+
+
