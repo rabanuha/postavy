@@ -27,12 +27,27 @@ const busStop = [
 ]}
 ];
 
-alert(busStop[0].latitudeBus + ' запись ' + busStop[0].longitudeBus);
-// функция поиска остановки
 
+
+
+// функция поиска остановки
 function findObject(array, key1, value1, key2, value2) {
-  return array.find(item => item[key1] === value1 &&  item[key2] === value2)
-  ;
+  let closestObject = null;
+  let minDifference = Infinity;
+
+  array.forEach(obj => {
+      const diff1 = Math.abs(obj[key1] - value1);
+      const diff2 = Math.abs(obj[key2] - value2);
+      const totalDifference = diff1 + diff2;
+
+      if (totalDifference < minDifference) {
+        minDifference = totalDifference;
+        findObject = obj;
+      }
+    
+  });
+
+  return findObject;
 }
 
 
@@ -64,7 +79,6 @@ if (foundObject) {
           break;
         }
     }
-
     
   } else {
     alert('Подойдите к остановке');
@@ -88,5 +102,4 @@ function errorCallback(error) {
       break;
   }
 }
-
 
