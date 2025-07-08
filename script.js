@@ -26,6 +26,8 @@ const busStop = [
   { hour: 18, minute: 43 },
 ]}
 ];
+
+alert(busStop[0].latitudeBus + ' запись ' + busStop[0].longitudeBus);
 // функция поиска остановки
 
 function findObject(array, key1, value1, key2, value2) {
