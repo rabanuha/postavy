@@ -4,7 +4,7 @@ const currentHour = currentTime.getHours();
 const currentMinute = currentTime.getMinutes();
 
 const busStop = [
-  {name: 'ПТУ', loc: 55.1178191, timeArrivalBus1: [
+  {name: 'ПТУ', latitudeBus: 55.1175, longitudeBus: 26.8250, timeArrivalBus1: [
   { hour: 7, minute: 3 },
   { hour: 7, minute: 33 },
   { hour: 8, minute: 38 },
@@ -26,9 +26,11 @@ const busStop = [
   { hour: 18, minute: 43 },
 ]}
 ];
+// функция поиска остановки
 
-function findObject(array, key, value) {
-  return array.find(item => item[key] === value);
+function findObject(array, key1, value1, key2, value2) {
+  return array.find(item => item[key1] === value1 &&  item[key2] === value2)
+  ;
 }
 
 
@@ -38,29 +40,33 @@ if (navigator.geolocation) {
 } else {
  alert("Geolocation is not supported by this browser.");
 }
+
+// функция получения координат и определение остановки
+
 function successCallback(position) {
 
-  const latitude = position.coords.latitude;
-  const longitude = position.coords.longitude;
-  alert(latitude);
-  const foundObject = findObject(busStop, 'loc', latitude);
-if (foundObject) {
-  for (let i = 0 ; i < foundObject.timeArrivalBus1.length; i++) {
-      if ( currentHour == foundObject.timeArrivalBus1.hour && (currentMinute < foundObject.timeArrivalBus1.minute) ) {
-        let minuteForBus = foundObject.timeArrivalBus1[i].minute - currentMinute;
-        alert('Ваша остановка ' + foundObject.name + '\nМаршрут №1 \nдо ближайшего автобуса: ' + minuteForBus + ' минут');
-        break;
-      } else if (currentHour < foundObject.timeArrivalBus1[i].hour) {
-        let minuteForBus = (60 - currentMinute) + foundObject.timeArrivalBus1[i].minute;
-        alert('Ваша остановка ' + foundObject.name + '\nМаршрут №1 \nдо ближайшего автобуса: ' + minuteForBus + ' минут');
-        break;
-      }
-  }
+  const latitude = Math.trunc(position.coords.latitude * 10000) / 10000;
+  const longitude = Math.trunc(position.coords.longitude * 10000) / 10000;
+  alert(latitude + " " + longitude);
+  const foundObject = findObject(busStop, 'latitudeBus', latitude, 'longitudeBus', longitude);
 
-  
-} else {
-  alert("Подойдите к остановке");
-}
+if (foundObject) {
+    for (let i = 0 ; i < foundObject.timeArrivalBus1.length; i++) {
+        if ( currentHour == foundObject.timeArrivalBus1.hour && (currentMinute < foundObject.timeArrivalBus1.minute) ) {
+          let minuteForBus = foundObject.timeArrivalBus1[i].minute - currentMinute;
+          alert('Ваша остановка ' + foundObject.name + '\nМаршрут №1 \nдо ближайшего автобуса: ' + minuteForBus + ' минут');
+          break;
+        } else if (currentHour < foundObject.timeArrivalBus1[i].hour) {
+          let minuteForBus = (60 - currentMinute) + foundObject.timeArrivalBus1[i].minute;
+          alert('Ваша остановка ' + foundObject.name + '\nМаршрут №1 \nдо ближайшего автобуса: ' + minuteForBus + ' минут');
+          break;
+        }
+    }
+
+    
+  } else {
+    alert('Подойдите к остановке');
+  }
 }
   
 
