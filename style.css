@@ -1,9 +1,9 @@
 html {
-	height: 90vh;
+	height: 100vh;
 }
 body {
 	display: flex;
-	height: 100vh;
+	height: 96vh;
 	flex-direction: column;
 	text-align: center;
 	background-color: blue;
@@ -13,8 +13,14 @@ h1 {
 	font-size: 8em;
 	color: white;
 }
-.bus {
+.interactive-block {
+	display: flex;
+	height: 40vh;
 	margin: 8vw 2vw;
+	flex-direction: column;
+	text-align: center;
+}
+.bus {
 }
 .nearestBus {
 	margin: 4vw 5vw;
@@ -23,15 +29,12 @@ h1 {
 	font-weight: bold;
     color: white;
     border-color: white;
-    padding-left: 0;
     border-radius: 30px;
     cursor: pointer;
 }
 
 
 h2 {
-	
-	bottom: 5vw;
 	margin: auto;
 	font-size: 5em;
 	color: white;
