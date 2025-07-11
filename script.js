@@ -1,71 +1,73 @@
 const currentTime = new Date();
 const currentHour = currentTime.getHours();
 const currentMinute = currentTime.getMinutes();
+const nearestBus = document.querySelector(".nearestBus");
+
+console.log(nearestBus);
 
 const busStop = [
-  {name: 'ПТУ', latitudeBus: 55.1175, longitudeBus: 26.8250, timeArrivalBus1: [
-  { hour: 7, minute: 3 },
-  { hour: 7, minute: 33 },
-  { hour: 8, minute: 38 },
-  { hour: 8, minute: 58 },
-  { hour: 11, minute: 8 },
-  { hour: 11, minute: 33 },
-  { hour: 11, minute: 58 },
-  { hour: 12, minute: 28 },
-  { hour: 12, minute: 53 },
-  { hour: 13, minute: 48 },
-  { hour: 14, minute: 18 },
-  { hour: 15, minute: 13 },
-  { hour: 15, minute: 43 },
-  { hour: 16, minute: 33 },
-  { hour: 17, minute: 3 },
-  { hour: 17, minute: 23 },
-  { hour: 17, minute: 53 },
-  { hour: 18, minute: 13 },
-  { hour: 18, minute: 43 }], timeArrivalBus3: [
-  { hour: 6, minute: 33 },
-  { hour: 7, minute: 23 },
-  { hour: 8, minute: 13 },
-  { hour: 8, minute: 48 },
-  { hour: 9, minute: 13 },
-  { hour: 9, minute: 43 },
-  { hour: 10, minute: 8 },
-  { hour: 10, minute: 28 },
-  { hour: 11, minute: 48 },
-  { hour: 12, minute: 43 },
-  { hour: 13, minute: 3 },
-  { hour: 13, minute: 30 },
-  { hour: 13, minute: 58 },
-  { hour: 14, minute: 28 },
-  { hour: 14, minute: 48 },
-  { hour: 15, minute: 22 },
-  { hour: 16, minute: 43 },
-  { hour: 17, minute: 13 },
-  { hour: 17, minute: 33 },
-  { hour: 18, minute: 3 },
-  { hour: 18, minute: 23 },]
-}, 
+  {name: 'ПТУ', latitudeBus: 55.1175, longitudeBus: 26.8250, routes : [{ numberBus : '1', timeHourMinute : [
+    { hour: 7, minute: 3 },
+    { hour: 7, minute: 33 },
+    { hour: 8, minute: 38 },
+    { hour: 8, minute: 58 },
+    { hour: 11, minute: 8 },
+    { hour: 11, minute: 33 },
+    { hour: 11, minute: 58 },
+    { hour: 12, minute: 28 },
+    { hour: 12, minute: 53 },
+    { hour: 13, minute: 48 },
+    { hour: 14, minute: 18 },
+    { hour: 15, minute: 13 },
+    { hour: 15, minute: 43 },
+    { hour: 16, minute: 33 },
+    { hour: 17, minute: 3 },
+    { hour: 17, minute: 23 },
+    { hour: 17, minute: 53 },
+    { hour: 18, minute: 13 },
+    { hour: 18, minute: 43 }]}, 
+    { numberBus : '3', timeHourMinute : [
+    { hour: 6, minute: 33 },
+    { hour: 7, minute: 23 },
+    { hour: 8, minute: 13 },
+    { hour: 8, minute: 48 },
+    { hour: 9, minute: 13 },
+    { hour: 9, minute: 43 },
+    { hour: 10, minute: 8 },
+    { hour: 10, minute: 28 },
+    { hour: 11, minute: 48 },
+    { hour: 12, minute: 43 },
+    { hour: 13, minute: 3 },
+    { hour: 13, minute: 30 },
+    { hour: 13, minute: 58 },
+    { hour: 14, minute: 28 },
+    { hour: 14, minute: 48 },
+    { hour: 15, minute: 22 },
+    { hour: 16, minute: 43 },
+    { hour: 17, minute: 13 },
+    { hour: 17, minute: 33 },
+    { hour: 18, minute: 3 },
+    { hour: 18, minute: 23 }]},
+    { numberBus : '3тк', timeHourMinute : [
+    { hour: 7, minute: 5 },
+    { hour: 8, minute: 5 },
+    { hour: 9, minute: 6 },
+    { hour: 10, minute: 14 },
+    { hour: 11, minute: 0 },
+    { hour: 12, minute: 55 },
+    { hour: 13, minute: 45 },
+    { hour: 15, minute: 31 },
+    { hour: 16, minute: 30 },
+    { hour: 17, minute: 30 },
+    { hour: 18, minute: 18 },
+    { hour: 19, minute: 11 }]},
+    { numberBus : '1тк', timeHourMinute : [
+    { hour: 9, minute: 3 }]}]}, 
+
+  // -------------------------------------
+
   {name: 'Льнозавод', latitudeBus: 55.1181, longitudeBus: 26.8240, timeArrivalBus1: [
-  { hour: 7, minute: 3 }], timeArrivalBus3: [
-  { hour: 7, minute: 3 },
-  { hour: 7, minute: 33 },
-  { hour: 8, minute: 38 },
-  { hour: 8, minute: 58 },
-  { hour: 11, minute: 8 },
-  { hour: 11, minute: 33 },
-  { hour: 11, minute: 58 },
-  { hour: 12, minute: 28 },
-  { hour: 12, minute: 53 },
-  { hour: 13, minute: 48 },
-  { hour: 14, minute: 18 },
-  { hour: 15, minute: 13 },
-  { hour: 15, minute: 43 },
-  { hour: 16, minute: 33 },
-  { hour: 17, minute: 3 },
-  { hour: 17, minute: 23 },
-  { hour: 17, minute: 53 },
-  { hour: 18, minute: 13 },
-  { hour: 18, minute: 43 }]
+  { hour: 7, minute: 3 }], timeArrivalBus3: [{ hour: 7, minute: 3 }]
 }, 
   {name: 'Кирмаш-напротив', latitudeBus: 55.1156, longitudeBus: 26.8295, timeArrivalBus1: [
   { hour: 7, minute: 3 }
@@ -275,88 +277,84 @@ const busStop = [
 
 
 
+function handleClick(event) {
 
-// Получаем данные локации
-
-
-
-// функция получения координат и определение остановки
-// функция поиска остановки
-
-
-function findObject(array, key1, value1, key2, value2) {
-  let closestObject = null;
-  let minDifference = Infinity;
-
-  array.forEach(obj => {
-      const diff1 = Math.abs(obj[key1] - value1);
-      const diff2 = Math.abs(obj[key2] - value2);
-      const totalDifference = diff1 + diff2;
-
-      if (totalDifference < minDifference) {
-        minDifference = totalDifference;
-        findObject = obj;
-      }
-    
-  });
-  return findObject;
-}
-
-
-function successCallback(position) {
-  const latitude = Math.trunc(position.coords.latitude * 10000) / 10000;
-  const longitude = Math.trunc(position.coords.longitude * 10000) / 10000;
-  alert(latitude + " " + longitude);
-  const foundObject = findObject(busStop, 'latitudeBus', latitude, 'longitudeBus', longitude);
-  alert(foundObject.name);
-if (foundObject) {
-    for (let i = 0 ; i < foundObject.timeArrivalBus1.length; i++) {
-        if ( currentHour == foundObject.timeArrivalBus1.hour && (currentMinute < foundObject.timeArrivalBus1.minute) ) {
-          let minuteForBus = foundObject.timeArrivalBus1[i].minute - currentMinute;
-          alert('Ваша остановка ' + foundObject.name + '\nМаршрут №1 \nдо ближайшего автобуса: ' + minuteForBus + ' минут');
-          break;
-        } else if (currentHour < foundObject.timeArrivalBus1[i].hour) {
-          let minuteForBus = (60 - currentMinute) + foundObject.timeArrivalBus1[i].minute;
-          alert('Ваша остановка ' + foundObject.name + '\nМаршрут №1 \nдо ближайшего автобуса: ' + minuteForBus + ' минут');
-          break;
-        }
-    }
-      for (let i = 0 ; i < foundObject.timeArrivalBus3.length; i++) {
-          if ( currentHour == foundObject.timeArrivalBus3.hour && (currentMinute < foundObject.timeArrivalBus3.minute) ) {
-            let minuteForBus = foundObject.timeArrivalBus3[i].minute - currentMinute;
-            alert('Ваша остановка ' + foundObject.name + '\nМаршрут №3 \nдо ближайшего автобуса: ' + minuteForBus + ' минут');
-            break;
-          } else if (currentHour < foundObject.timeArrivalBus3[i].hour) {
-            let minuteForBus = (60 - currentMinute) + foundObject.timeArrivalBus3[i].minute;
-            alert('Ваша остановка ' + foundObject.name + '\nМаршрут №3 \nдо ближайшего автобуса: ' + minuteForBus + ' минут');
-            break;
+  function timeArrivalBus(array, hour, minute) {
+    const arrivalTimeBus = [{name : array.name}];
+        for (let i = 0 ; i < array.routes.length; i++) {
+          for (let j = 0 ; j < array.routes[i].timeHourMinute.length; j++) {
+                if ( hour == array.routes[i].timeHourMinute[j].hour && (minute < array.routes[i].timeHourMinute[j].minute) ) {
+                  arrivalTimeBus.push({bus : array.routes[i].numberBus, minute : (array.routes[i].timeHourMinute[j].minute - minute)});
+                  break;
+                } else if (hour < array.routes[i].timeHourMinute[j].hour) {
+                  // let minuteForBus = (60 - currentMinute) + array.routes[i].timeHourMinute[j].minute;
+                  // let numberForBus = array.routes[i].numberBus
+                  arrivalTimeBus.push({bus : array.routes[i].numberBus, minute : ((60 - currentMinute) + array.routes[i].timeHourMinute[j].minute)});
+                  break;
+                  }
           }
-      }
-    } 
+        }      
 
-
-  } 
-    
-if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-} else {
- alert("Geolocation is not supported by this browser.");
-}
-
-function errorCallback(error) {
-  switch (error.code) {
-    case error.PERMISSION_DENIED:
-      alert("User denied the request for Geolocation.");
-      break;
-    case error.POSITION_UNAVAILABLE:
-      alert("Location information is unavailable.");
-      break;
-    case error.TIMEOUT:
-      alert("The request to get user location timed out.");
-      break;
-    case error.UNKNOWN_ERROR:
-      alert("An unknown error occurred.");
-      break;
+    return arrivalTimeBus;
   }
+
+  // функция получения координат и определение остановки
+  // функция поиска остановки
+
+
+  function findObject(array, key1, value1, key2, value2) {
+    let closestObject = null;
+    let minDifference = Infinity;
+
+    array.forEach(obj => {
+        const diff1 = Math.abs(obj[key1] - value1);
+        const diff2 = Math.abs(obj[key2] - value2);
+        const totalDifference = diff1 + diff2;
+
+        if (totalDifference < minDifference) {
+          minDifference = totalDifference;
+          findObject = obj;
+        }
+    });
+    return findObject;
+  }
+
+  // 
+
+
+  function successCallback(position) {
+    const latitude = Math.trunc(position.coords.latitude * 10000) / 10000;
+    const longitude = Math.trunc(position.coords.longitude * 10000) / 10000;
+    // alert(latitude + " " + longitude);
+    const foundObject = findObject(busStop, 'latitudeBus', latitude, 'longitudeBus', longitude);
+    const tA = timeArrivalBus(foundObject, currentHour, currentMinute);
+
+    alert(tA);
+  } 
+      
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+  } else {
+   alert("Geolocation is not supported by this browser.");
+  }
+
+  function errorCallback(error) {
+    switch (error.code) {
+      case error.PERMISSION_DENIED:
+        alert("User denied the request for Geolocation.");
+        break;
+      case error.POSITION_UNAVAILABLE:
+        alert("Location information is unavailable.");
+        break;
+      case error.TIMEOUT:
+        alert("The request to get user location timed out.");
+        break;
+      case error.UNKNOWN_ERROR:
+        alert("An unknown error occurred.");
+        break;
+    }
+  }
+
 }
   
+nearestBus.addEventListener('click', handleClick);
