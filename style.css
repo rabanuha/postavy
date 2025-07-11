@@ -1,19 +1,39 @@
+html {
+	height: 100vh;
+}
 body {
-	  background-image: url("./lunch.png"); /* Замените на путь к вашей картинке */
-	  background-repeat: no-repeat; /* Отключает повторение */
-	  /*background-size: cover; /* Растягивает изображение, чтобы покрыть весь элемент */*/
-	  background-attachment: fixed; /* Фиксирует фон, не прокручивается с контентом */
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	text-align: center;
+	background-color: blue;
 	}
+h1 {
+	margin: 8vw 5vw;
+	font-size: 8em;
+	color: white;
+}
+.bus {
+	margin: 8vw 2vw;
+}
 .nearestBus {
-
-	margin-top: 880px;
-	margin-left: 25px;
+	margin: 4vw 5vw;
 	background-color: transparent;
-	font-size: 55px;
+	font-size: 1.5em;
 	font-weight: bold;
-  color: white;
-  border-color: white;
-  padding: 10px 20px 10px 20px; /* Верхний, правый, нижний, левый отступ */
-  border-radius: 50px;
-  cursor: pointer;
+    color: white;
+    border-color: white;
+    padding-left: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+h2 {
+	
+	bottom: 5vw;
+	margin: auto;
+	font-size: 6em;
+	color: white;
+	font-weight: bold;
 }
