@@ -1,7 +1,11 @@
+screen.orientation.lock('portrait');
+
 const currentTime = new Date();
 const currentHour = currentTime.getHours();
 const currentMinute = currentTime.getMinutes();
 const nearestBus = document.querySelector(".nearestBus");
+const bus = document.querySelector(".bus");
+
 
 const busStop = [
   {name: 'ПТУ', latitudeBus: 55.1175, longitudeBus: 26.8250, routes : [{ numberBus : '1', timeHourMinute : [
@@ -277,7 +281,13 @@ const busStop = [
 
 function handleClick(event) {
 
+  let parent = bus.parentNode;
+  parent.removeChild(bus);
+  parent.removeChild(nearestBus);
+
+
   function timeArrivalBus(array, hour, minute) {
+    
     const arrivalTimeBus = [{name : array.name}];
         for (let i = 0 ; i < array.routes.length; i++) {
           for (let j = 0 ; j < array.routes[i].timeHourMinute.length; j++) {
@@ -295,9 +305,6 @@ function handleClick(event) {
 
     return arrivalTimeBus;
   }
-
-  // функция получения координат и определение остановки
-  // функция поиска остановки
 
 
   function findObject(array, key1, value1, key2, value2) {
@@ -317,19 +324,13 @@ function handleClick(event) {
     return findObject;
   }
 
-  // 
-
-
   function successCallback(position) {
     // const latitude = Math.trunc(position.coords.latitude * 10000) / 10000;
     // const longitude = Math.trunc(position.coords.longitude * 10000) / 10000;
-    const latitude = 55.1175;
-    const longitude = 26.8250;
     // alert(latitude + " " + longitude);
-    const foundObject = findObject(busStop, 'latitudeBus', latitude, 'longitudeBus', longitude);
+    const foundObject = findObject(busStop, 'latitudeBus', 55.1175, 'longitudeBus', 26.8250);
     const tA = timeArrivalBus(foundObject, currentHour, currentMinute);
-
-    alert(tA);
+    objToDiv(tA);
   } 
       
   if (navigator.geolocation) {
@@ -354,7 +355,26 @@ function handleClick(event) {
         break;
     }
   }
-
-}
   
+}
+
 nearestBus.addEventListener('click', handleClick);
+
+function objToDiv(array) {
+  console.log(array);
+  const interactiveBlock = document.querySelector(".interactive-block");
+  const stopBusName = document.createElement('div');
+  stopBusName.textContent = 'Транспортная остановка: ' + array[0].name;
+  stopBusName.id = 'stop-bus-name';
+  interactiveBlock.appendChild(stopBusName);
+  for (var i = 1; i < array.length; i++) {
+    const sceduleBus = document.createElement('div');
+    sceduleBus.textContent = 'Автобус с номер №' + array[i].bus + 'Прибудет через: ' + array[i].minute + ' минут';
+    sceduleBus.id = 'scedule-bus' + i;
+    interactiveBlock.appendChild(sceduleBus);
+  }
+}
+
+
+
+
