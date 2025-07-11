@@ -3,8 +3,6 @@ const currentHour = currentTime.getHours();
 const currentMinute = currentTime.getMinutes();
 const nearestBus = document.querySelector(".nearestBus");
 
-console.log(nearestBus);
-
 const busStop = [
   {name: 'ПТУ', latitudeBus: 55.1175, longitudeBus: 26.8250, routes : [{ numberBus : '1', timeHourMinute : [
     { hour: 7, minute: 3 },
@@ -323,8 +321,10 @@ function handleClick(event) {
 
 
   function successCallback(position) {
-    const latitude = Math.trunc(position.coords.latitude * 10000) / 10000;
-    const longitude = Math.trunc(position.coords.longitude * 10000) / 10000;
+    // const latitude = Math.trunc(position.coords.latitude * 10000) / 10000;
+    // const longitude = Math.trunc(position.coords.longitude * 10000) / 10000;
+    const latitude = 55.1175;
+    const longitude = 26.8250;
     // alert(latitude + " " + longitude);
     const foundObject = findObject(busStop, 'latitudeBus', latitude, 'longitudeBus', longitude);
     const tA = timeArrivalBus(foundObject, currentHour, currentMinute);
