@@ -1,5 +1,3 @@
-screen.orientation.lock('portrait');
-
 const currentTime = new Date();
 const currentHour = currentTime.getHours();
 const currentMinute = currentTime.getMinutes();
@@ -363,17 +361,44 @@ nearestBus.addEventListener('click', handleClick);
 function objToDiv(array) {
   console.log(array);
   const interactiveBlock = document.querySelector(".interactive-block");
+  interactiveBlock.style.backgroundColor = "white";
+
   const stopBusName = document.createElement('div');
-  stopBusName.textContent = 'Транспортная остановка: ' + array[0].name;
-  stopBusName.id = 'stop-bus-name';
+  stopBusName.classList.add('stop-bus-name');
+  stopBusName.textContent = 'остановка: ' + array[0].name;
   interactiveBlock.appendChild(stopBusName);
+  const blockSceduleBuses = document.createElement('div');
+  blockSceduleBuses.classList.add('block-scedule-buses');
+  interactiveBlock.appendChild(blockSceduleBuses);
+
   for (var i = 1; i < array.length; i++) {
-    const sceduleBus = document.createElement('div');
-    sceduleBus.textContent = 'Автобус с номер №' + array[i].bus + 'Прибудет через: ' + array[i].minute + ' минут';
-    sceduleBus.id = 'scedule-bus' + i;
-    interactiveBlock.appendChild(sceduleBus);
+    const  blockSceduleBus = document.createElement('div');
+    blockSceduleBus.classList.add('block-scedule-bus');
+    blockSceduleBuses.appendChild(blockSceduleBus);
+
+
+    const numBusBlock = document.createElement('div');
+    numBusBlock.classList.add('num-bus-block');
+    blockSceduleBus.appendChild(numBusBlock);
+
+    const numBusImg = document.createElement('img');
+    numBusImg.classList.add('num-bus-img');
+    numBusBlock.appendChild(numBusImg);
+
+    const numBus = document.createElement('div');
+    numBus.classList.add('num-bus');
+    numBus.textContent = array[i].bus;
+    numBusBlock.appendChild(numBus);
+
+
+    const timeBus = document.createElement('div');
+    timeBus.classList.add('time-bus');
+    timeBus.textContent = 'через: ' + array[i].minute + ' мин.';
+    blockSceduleBus.appendChild(timeBus);
   }
 }
+
+
 
 
 
