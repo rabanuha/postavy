@@ -3,6 +3,7 @@ html {
 }
 body {
 	display: flex;
+	margin: 0;
 	height: 96vh;
 	flex-direction: column;
 	text-align: center;
@@ -16,7 +17,8 @@ h1 {
 .interactive-block {
 	display: flex;
 	height: 40vh;
-	margin: 8vw 2vw;
+	width: 100%;
+
 	flex-direction: column;
 	text-align: center;
 }
@@ -39,4 +41,36 @@ h2 {
 	font-size: 5em;
 	color: white;
 	font-weight: bold;
+}
+
+.stop-bus-name {
+	margin-top: 7vw;
+	margin-bottom: 7vw;
+}
+
+.block-scedule-bus {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 4vw 5vw;
+	
+}
+.num-bus-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 60px;
+	padding: 5px 15px;
+	border: 3px solid red;
+	border-radius: 20px;
+}
+.num-bus-img {
+	height: 25px;
+	width: 25px;
+	border: none;
+	background-image: url("bus-icon_609277-1518-removebg-preview.png");
+	background-repeat: no-repeat; /* Запрещаем повторение */
+  	background-size: cover; /* Растягиваем изображение на весь элемент */
+  	background-position: center; /* Центрируем изображение */
+
 }
