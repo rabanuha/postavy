@@ -381,7 +381,7 @@ function objToDiv(array) {
     numBusBlock.classList.add('num-bus-block');
     blockSceduleBus.appendChild(numBusBlock);
 
-    const numBusImg = document.createElement('img');
+    const numBusImg = document.createElement('div');
     numBusImg.classList.add('num-bus-img');
     numBusBlock.appendChild(numBusImg);
 
