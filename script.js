@@ -5,6 +5,7 @@ const nearestBus = document.querySelector(".nearestBus");
 const bus = document.querySelector(".bus");
 
 
+
 const busStop = [
   {name: 'ПТУ', latitudeBus: 55.1175, longitudeBus: 26.8250, routes : [{ numberBus : '1', timeHourMinute : [
     { hour: 7, minute: 3 },
@@ -64,11 +65,79 @@ const busStop = [
     { numberBus : '1тк', timeHourMinute : [
     { hour: 9, minute: 3 }]}]}, 
 
+    {name: 'Льнозавод', latitudeBus: 55.1181, longitudeBus: 26.8240, routes : [{ numberBus : '1', timeHourMinute : [
+      { hour: 7, minute: 3 },
+      { hour: 7, minute: 33 },
+      { hour: 8, minute: 38 },
+      { hour: 8, minute: 58 },
+      { hour: 11, minute: 8 },
+      { hour: 11, minute: 33 },
+      { hour: 11, minute: 58 },
+      { hour: 12, minute: 28 },
+      { hour: 12, minute: 53 },
+      { hour: 13, minute: 48 },
+      { hour: 14, minute: 18 },
+      { hour: 15, minute: 13 },
+      { hour: 15, minute: 43 },
+      { hour: 16, minute: 33 },
+      { hour: 17, minute: 3 },
+      { hour: 17, minute: 23 },
+      { hour: 17, minute: 53 },
+      { hour: 18, minute: 13 },
+      { hour: 18, minute: 43 }]}, 
+      { numberBus : '3', timeHourMinute : [
+      { hour: 6, minute: 33 },
+      { hour: 7, minute: 23 },
+      { hour: 8, minute: 13 },
+      { hour: 8, minute: 48 },
+      { hour: 9, minute: 13 },
+      { hour: 9, minute: 43 },
+      { hour: 10, minute: 8 },
+      { hour: 10, minute: 28 },
+      { hour: 11, minute: 48 },
+      { hour: 12, minute: 43 },
+      { hour: 13, minute: 3 },
+      { hour: 13, minute: 30 },
+      { hour: 13, minute: 58 },
+      { hour: 14, minute: 28 },
+      { hour: 14, minute: 48 },
+      { hour: 15, minute: 22 },
+      { hour: 16, minute: 43 },
+      { hour: 17, minute: 13 },
+      { hour: 17, minute: 33 },
+      { hour: 18, minute: 3 },
+      { hour: 18, minute: 23 }]},
+      { numberBus : '3тк', timeHourMinute : [
+      { hour: 7, minute: 5 },
+      { hour: 8, minute: 5 },
+      { hour: 9, minute: 6 },
+      { hour: 10, minute: 14 },
+      { hour: 11, minute: 0 },
+      { hour: 12, minute: 55 },
+      { hour: 13, minute: 45 },
+      { hour: 15, minute: 31 },
+      { hour: 16, minute: 30 },
+      { hour: 17, minute: 30 },
+      { hour: 18, minute: 18 },
+      { hour: 19, minute: 11 }]},
+      { numberBus : '1тк', timeHourMinute : [
+      { hour: 7, minute: 3 },
+      { hour: 7, minute: 5 },
+      { hour: 8, minute: 5 },
+      { hour: 9, minute: 6 },
+      { hour: 10, minute: 14 },
+      { hour: 11, minute: 0 },
+      { hour: 12, minute: 55 },
+      { hour: 13, minute: 45 },
+      { hour: 15, minute: 31 },
+      { hour: 16, minute: 30 },
+      { hour: 17, minute: 30 },
+      { hour: 18, minute: 18 },
+      { hour: 19, minute: 11 }
+    ]}]},
+
   // -------------------------------------
 
-  {name: 'Льнозавод', latitudeBus: 55.1181, longitudeBus: 26.8240, timeArrivalBus1: [
-  { hour: 7, minute: 3 }], timeArrivalBus3: [{ hour: 7, minute: 3 }]
-}, 
   {name: 'Кирмаш-напротив', latitudeBus: 55.1156, longitudeBus: 26.8295, timeArrivalBus1: [
   { hour: 7, minute: 3 }
 ]},
@@ -185,9 +254,79 @@ const busStop = [
   {name: 'Теремок', latitudeBus: 55.1143, longitudeBus: 26.8738, timeArrivalBus1: [
   { hour: 7, minute: 3 }
 ]},
-  {name: 'Станкевича', latitudeBus: 55.1169, longitudeBus: 26.8776, timeArrivalBus1: [
-  { hour: 7, minute: 3 }
-]},
+
+{name: 'Станкевича', latitudeBus: 55.1169, longitudeBus: 26.8776, routes : [{ numberBus : '1', timeHourMinute : [
+  { hour: 7, minute: 3 },
+  { hour: 7, minute: 33 },
+  { hour: 8, minute: 38 },
+  { hour: 8, minute: 58 },
+  { hour: 11, minute: 8 },
+  { hour: 11, minute: 33 },
+  { hour: 11, minute: 58 },
+  { hour: 12, minute: 28 },
+  { hour: 12, minute: 53 },
+  { hour: 13, minute: 48 },
+  { hour: 14, minute: 18 },
+  { hour: 15, minute: 13 },
+  { hour: 15, minute: 43 },
+  { hour: 16, minute: 33 },
+  { hour: 17, minute: 3 },
+  { hour: 17, minute: 23 },
+  { hour: 17, minute: 53 },
+  { hour: 18, minute: 13 },
+  { hour: 18, minute: 43 }]}, 
+  { numberBus : '3', timeHourMinute : [
+  { hour: 6, minute: 33 },
+  { hour: 7, minute: 23 },
+  { hour: 8, minute: 13 },
+  { hour: 8, minute: 48 },
+  { hour: 9, minute: 13 },
+  { hour: 9, minute: 43 },
+  { hour: 10, minute: 8 },
+  { hour: 10, minute: 28 },
+  { hour: 11, minute: 48 },
+  { hour: 12, minute: 43 },
+  { hour: 13, minute: 3 },
+  { hour: 13, minute: 30 },
+  { hour: 13, minute: 58 },
+  { hour: 14, minute: 28 },
+  { hour: 14, minute: 48 },
+  { hour: 15, minute: 22 },
+  { hour: 16, minute: 43 },
+  { hour: 17, minute: 13 },
+  { hour: 17, minute: 33 },
+  { hour: 18, minute: 3 },
+  { hour: 18, minute: 23 }]},
+  { numberBus : '3тк', timeHourMinute : [
+  { hour: 7, minute: 5 },
+  { hour: 8, minute: 5 },
+  { hour: 9, minute: 6 },
+  { hour: 10, minute: 14 },
+  { hour: 11, minute: 0 },
+  { hour: 12, minute: 55 },
+  { hour: 13, minute: 45 },
+  { hour: 15, minute: 31 },
+  { hour: 16, minute: 30 },
+  { hour: 17, minute: 30 },
+  { hour: 18, minute: 18 },
+  { hour: 19, minute: 11 }]},
+  { numberBus : '1тк', timeHourMinute : [
+  { hour: 7, minute: 3 },
+  { hour: 7, minute: 5 },
+  { hour: 8, minute: 5 },
+  { hour: 9, minute: 6 },
+  { hour: 10, minute: 14 },
+  { hour: 11, minute: 0 },
+  { hour: 12, minute: 55 },
+  { hour: 13, minute: 45 },
+  { hour: 15, minute: 31 },
+  { hour: 16, minute: 30 },
+  { hour: 17, minute: 30 },
+  { hour: 18, minute: 18 },
+  { hour: 19, minute: 11 }
+  
+  ]}]},
+
   {name: 'Школа №3', latitudeBus: 55.1208, longitudeBus: 26.8145, timeArrivalBus1: [
   { hour: 7, minute: 3 }
 ]},
@@ -277,10 +416,13 @@ const busStop = [
 
 
 
+
+
 function handleClick(event) {
 
   let parent = bus.parentNode;
   parent.removeChild(bus);
+  nearestBus.removeEventListener('click', handleClick);
   parent.removeChild(nearestBus);
 
 
@@ -293,8 +435,6 @@ function handleClick(event) {
                   arrivalTimeBus.push({bus : array.routes[i].numberBus, minute : (array.routes[i].timeHourMinute[j].minute - minute)});
                   break;
                 } else if (hour < array.routes[i].timeHourMinute[j].hour) {
-                  // let minuteForBus = (60 - currentMinute) + array.routes[i].timeHourMinute[j].minute;
-                  // let numberForBus = array.routes[i].numberBus
                   arrivalTimeBus.push({bus : array.routes[i].numberBus, minute : ((60 - currentMinute) + array.routes[i].timeHourMinute[j].minute)});
                   break;
                   }
@@ -323,12 +463,15 @@ function handleClick(event) {
   }
 
   function successCallback(position) {
-    // const latitude = Math.trunc(position.coords.latitude * 10000) / 10000;
-    // const longitude = Math.trunc(position.coords.longitude * 10000) / 10000;
-    // alert(latitude + " " + longitude);
-    const foundObject = findObject(busStop, 'latitudeBus', 55.1175, 'longitudeBus', 26.8250);
+    const latitude = Math.trunc(position.coords.latitude * 10000) / 10000;
+    const longitude = Math.trunc(position.coords.longitude * 10000) / 10000;
+    
+    const foundObject = findObject(busStop, 'latitudeBus', latitude, 'longitudeBus', longitude);
+
+    // alert(latitude + " " + longitude + foundObject.name);
     const tA = timeArrivalBus(foundObject, currentHour, currentMinute);
     objToDiv(tA);
+
   } 
       
   if (navigator.geolocation) {
@@ -356,10 +499,8 @@ function handleClick(event) {
   
 }
 
-nearestBus.addEventListener('click', handleClick);
 
 function objToDiv(array) {
-  console.log(array);
   const interactiveBlock = document.querySelector(".interactive-block");
   interactiveBlock.style.backgroundColor = "white";
 
@@ -372,14 +513,55 @@ function objToDiv(array) {
   interactiveBlock.appendChild(blockSceduleBuses);
 
   for (var i = 1; i < array.length; i++) {
+
+    console.log(i);
+
     const  blockSceduleBus = document.createElement('div');
     blockSceduleBus.classList.add('block-scedule-bus');
     blockSceduleBuses.appendChild(blockSceduleBus);
 
 
-    const numBusBlock = document.createElement('div');
-    numBusBlock.classList.add('num-bus-block');
-    blockSceduleBus.appendChild(numBusBlock);
+
+    if (i % 2 === 0) { 
+
+      const numBusBlock = document.createElement('div');
+      numBusBlock.classList.add('num-bus-block-red');
+      blockSceduleBus.appendChild(numBusBlock);
+
+
+      if ( (i + 1) < array.length ) {
+        const line = document.createElement('div');
+        line.classList.add('line');
+        blockSceduleBuses.appendChild(line);
+      }
+
+      const numBusImg = document.createElement('div');
+      numBusImg.classList.add('num-bus-img');
+      numBusBlock.appendChild(numBusImg);
+
+      const numBus = document.createElement('div');
+      numBus.classList.add('num-bus');
+      numBus.textContent = array[i].bus;
+      numBusBlock.appendChild(numBus);
+
+
+      const timeBus = document.createElement('div');
+      timeBus.classList.add('time-bus');
+      timeBus.textContent = 'через: ' + array[i].minute + ' мин.';
+      blockSceduleBus.appendChild(timeBus);
+
+      continue; 
+    }
+
+      const numBusBlock = document.createElement('div');
+      numBusBlock.classList.add('num-bus-block-green');
+      blockSceduleBus.appendChild(numBusBlock);
+
+      if ( (i + 1) < array.length ) {
+        const line = document.createElement('div');
+        line.classList.add('line');
+        blockSceduleBuses.appendChild(line);
+      }
 
     const numBusImg = document.createElement('div');
     numBusImg.classList.add('num-bus-img');
@@ -395,8 +577,13 @@ function objToDiv(array) {
     timeBus.classList.add('time-bus');
     timeBus.textContent = 'через: ' + array[i].minute + ' мин.';
     blockSceduleBus.appendChild(timeBus);
+
+    
   }
 }
+
+
+nearestBus.addEventListener('click', handleClick);
 
 
 
