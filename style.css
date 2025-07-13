@@ -55,7 +55,7 @@ h2 {
 	margin: 4vw 5vw;
 	
 }
-.num-bus-block {
+.num-bus-block-red {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -64,13 +64,22 @@ h2 {
 	border: 3px solid red;
 	border-radius: 20px;
 }
+
+.num-bus-block-green {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 60px;
+	padding: 5px 15px;
+	border: 3px solid green;
+	border-radius: 20px;
+}
 .num-bus-img {
 	height: 25px;
 	width: 25px;
-	border: none;
 	background-image: url("bus-icon_609277-1518-removebg-preview.png");
 	background-repeat: no-repeat; /* Запрещаем повторение */
   	background-size: cover; /* Растягиваем изображение на весь элемент */
   	background-position: center; /* Центрируем изображение */
-
+  	
 }
