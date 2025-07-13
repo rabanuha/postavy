@@ -506,7 +506,7 @@ function objToDiv(array) {
 
   const stopBusName = document.createElement('div');
   stopBusName.classList.add('stop-bus-name');
-  stopBusName.textContent = 'остановка: ' + array[0].name;
+  stopBusName.textContent = array[0].name;
   interactiveBlock.appendChild(stopBusName);
   const blockSceduleBuses = document.createElement('div');
   blockSceduleBuses.classList.add('block-scedule-buses');
@@ -514,13 +514,9 @@ function objToDiv(array) {
 
   for (var i = 1; i < array.length; i++) {
 
-    console.log(i);
-
     const  blockSceduleBus = document.createElement('div');
     blockSceduleBus.classList.add('block-scedule-bus');
     blockSceduleBuses.appendChild(blockSceduleBus);
-
-
 
     if (i % 2 === 0) { 
 
