@@ -325,8 +325,7 @@ const busStop = [
   { hour: 18, minute: 18 },
   { hour: 19, minute: 11 }
   
-  ]}]}
-    // ,
+  ]}]},
 
 //   {name: 'Школа №3', latitudeBus: 55.1208, longitudeBus: 26.8145, timeArrivalBus1: [
 //   { hour: 7, minute: 3 }
@@ -411,10 +410,9 @@ const busStop = [
 //   { hour: 17, minute: 41 },
 //   { hour: 18, minute: 1 }
 // ]},
-//   {name: 'Нотариальная контора', latitudeBus: 55.1102, longitudeBus: 26.8631, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]}
-    ];
+  {name: 'Нотариальная контора', latitudeBus: 55.1102, longitudeBus: 26.8631, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]}];
 
 
 
