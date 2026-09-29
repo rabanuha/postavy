@@ -61,7 +61,9 @@ const busStop = [
   { name: 'Лимончик', latitudeBus: 55.1139, longitudeBus: 26.8736, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
   { name: 'Теремок', latitudeBus: 55.1143, longitudeBus: 26.8738, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
   { 
-    name: 'Полевая', 
+    // name: 'Полевая', 
+    name: 'Поставский лесхоз',
+    
     latitudeBus: 55.1222, 
     longitudeBus: 26.8087, 
     routes : [
