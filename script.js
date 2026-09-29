@@ -63,7 +63,8 @@ const busStop = [
     { hour: 18, minute: 18 },
     { hour: 19, minute: 11 }]},
     { numberBus : '1тк', timeHourMinute : [
-    { hour: 9, minute: 3 }]}]}, 
+    { hour: 9, minute: 3 }
+  ]}]}, 
 
     {name: 'Льнозавод', latitudeBus: 55.1181, longitudeBus: 26.8240, routes : [{ numberBus : '1', timeHourMinute : [
       { hour: 7, minute: 3 },
@@ -135,7 +136,7 @@ const busStop = [
       { hour: 18, minute: 18 },
       { hour: 19, minute: 11 }
     ]}]}
-
+];
 //   // -------------------------------------
 
 //   {name: 'Кирмаш-напротив', latitudeBus: 55.1156, longitudeBus: 26.8295, timeArrivalBus1: [
@@ -414,7 +415,7 @@ const busStop = [
 //   { hour: 7, minute: 3 }
 // ]}
   
-// ];
+
 
 
 
