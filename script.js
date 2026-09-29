@@ -1,6 +1,6 @@
 const currentTime = new Date();
-const currentHour = currentTime.getHours();
-const currentMinute = currentTime.getMinutes();
+let currentHour = currentTime.getHours();
+let currentMinute = currentTime.getMinutes();
 const nearestBus = document.querySelector(".nearestBus");
 const bus = document.querySelector(".bus");
 
@@ -60,20 +60,6 @@ const busStop = [
   },
   { name: 'Лимончик', latitudeBus: 55.1139, longitudeBus: 26.8736, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
   { name: 'Теремок', latitudeBus: 55.1143, longitudeBus: 26.8738, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
-  {
-    name: 'Станкевича', 
-    latitudeBus: 55.1169, 
-    longitudeBus: 26.8776, 
-    routes : [
-      { numberBus : '1', timeHourMinute : [{ hour: 7, minute: 3 }, { hour: 7, minute: 33 }, { hour: 8, minute: 38 }, { hour: 8, minute: 58 }, { hour: 11, minute: 8 }, { hour: 11, minute: 33 }, { hour: 11, minute: 58 }, { hour: 12, minute: 28 }, { hour: 12, minute: 53 }, { hour: 13, minute: 48 }, { hour: 14, minute: 18 }, { hour: 15, minute: 13 }, { hour: 15, minute: 43 }, { hour: 16, minute: 33 }, { hour: 17, minute: 3 }, { hour: 17, minute: 23 }, { hour: 17, minute: 53 }, { hour: 18, minute: 13 }, { hour: 18, minute: 43 }]}, 
-      { numberBus : '3', timeHourMinute : [{ hour: 6, minute: 33 }, { hour: 7, minute: 23 }, { hour: 8, minute: 13 }, { hour: 8, minute: 48 }, { hour: 9, minute: 13 }, { hour: 9, minute: 43 }, { hour: 10, minute: 8 }, { hour: 10, minute: 28 }, { hour: 11, minute: 48 }, { hour: 12, minute: 43 }, { hour: 13, minute: 3 }, { hour: 13, minute: 30 }, { hour: 13, minute: 58 }, { hour: 14, minute: 28 }, { hour: 14, minute: 48 }, { hour: 15, minute: 22 }, { hour: 16, minute: 43 }, { hour: 17, minute: 13 }, { hour: 17, minute: 33 }, { hour: 18, minute: 3 }, { hour: 18, minute: 23 }]},
-      { numberBus : '3тк', timeHourMinute : [{ hour: 7, minute: 5 }, { hour: 8, minute: 5 }, { hour: 9, minute: 6 }, { hour: 10, minute: 14 }, { hour: 11, minute: 0 }, { hour: 12, minute: 55 }, { hour: 13, minute: 45 }, { hour: 15, minute: 31 }, { hour: 16, minute: 30 }, { hour: 17, minute: 30 }, { hour: 18, minute: 18 }, { hour: 19, minute: 11 }]},
-      { numberBus : '1тк', timeHourMinute : [{ hour: 7, minute: 3 }, { hour: 7, minute: 5 }, { hour: 8, minute: 5 }, { hour: 9, minute: 6 }, { hour: 10, minute: 14 }, { hour: 11, minute: 0 }, { hour: 12, minute: 55 }, { hour: 13, minute: 45 }, { hour: 15, minute: 31 }, { hour: 16, minute: 30 }, { hour: 17, minute: 30 }, { hour: 18, minute: 18 }, { hour: 19, minute: 11 }]}
-    ]
-  },
-{ name: 'Школа №3', latitudeBus: 55.1208, longitudeBus: 26.8145, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
-{ name: 'Fix Price', latitudeBus: 55.1204, longitudeBus: 26.8152, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
-
   { 
     name: 'Полевая', 
     latitudeBus: 55.1222, 
@@ -84,10 +70,20 @@ const busStop = [
       { numberBus : '3тк', timeHourMinute : [{ hour: 7, minute: 5 }, { hour: 8, minute: 5 }, { hour: 9, minute: 6 }, { hour: 10, minute: 14 }, { hour: 11, minute: 0 }, { hour: 12, minute: 55 }, { hour: 13, minute: 45 }, { hour: 15, minute: 31 }, { hour: 16, minute: 30 }, { hour: 17, minute: 30 }, { hour: 18, minute: 18 }, { hour: 19, minute: 11 }]},
       { numberBus : '1тк', timeHourMinute : [{ hour: 7, minute: 3 }, { hour: 7, minute: 5 }, { hour: 8, minute: 5 }, { hour: 9, minute: 6 }, { hour: 10, minute: 14 }, { hour: 11, minute: 0 }, { hour: 12, minute: 55 }, { hour: 13, minute: 45 }, { hour: 15, minute: 31 }, { hour: 16, minute: 30 }, { hour: 17, minute: 30 }, { hour: 18, minute: 18 }, { hour: 19, minute: 11 }]}
     ]
-  }, 
+  },
+  {
+    name: 'Станкевича', latitudeBus: 55.1169, 
 
-
-  
+longitudeBus: 26.8776,
+routes : [
+{ numberBus : '1', timeHourMinute : [{ hour: 7, minute: 3 }, { hour: 7, minute: 33 }, { hour: 8, minute: 38 }, { hour: 8, minute: 58 }, { hour: 11, minute: 8 }, { hour: 11, minute: 33 }, { hour: 11, minute: 58 }, { hour: 12, minute: 28 }, { hour: 12, minute: 53 }, { hour: 13, minute: 48 }, { hour: 14, minute: 18 }, { hour: 15, minute: 13 }, { hour: 15, minute: 43 }, { hour: 16, minute: 33 }, { hour: 17, minute: 3 }, { hour: 17, minute: 23 }, { hour: 17, minute: 53 }, { hour: 18, minute: 13 }, { hour: 18, minute: 43 }]},
+{ numberBus : '3', timeHourMinute : [{ hour: 6, minute: 33 }, { hour: 7, minute: 23 }, { hour: 8, minute: 13 }, { hour: 8, minute: 48 }, { hour: 9, minute: 13 }, { hour: 9, minute: 43 }, { hour: 10, minute: 8 }, { hour: 10, minute: 28 }, { hour: 11, minute: 48 }, { hour: 12, minute: 43 }, { hour: 13, minute: 3 }, { hour: 13, minute: 30 }, { hour: 13, minute: 58 }, { hour: 14, minute: 28 }, { hour: 14, minute: 48 }, { hour: 15, minute: 22 }, { hour: 16, minute: 43 }, { hour: 17, minute: 13 }, { hour: 17, minute: 33 }, { hour: 18, minute: 3 }, { hour: 18, minute: 23 }]},
+{ numberBus : '3тк', timeHourMinute : [{ hour: 7, minute: 5 }, { hour: 8, minute: 5 }, { hour: 9, minute: 6 }, { hour: 10, minute: 14 }, { hour: 11, minute: 0 }, { hour: 12, minute: 55 }, { hour: 13, minute: 45 }, { hour: 15, minute: 31 }, { hour: 16, minute: 30 }, { hour: 17, minute: 30 }, { hour: 18, minute: 18 }, { hour: 19, minute: 11 }]},
+{ numberBus : '1тк', timeHourMinute : [{ hour: 7, minute: 3 }, { hour: 7, minute: 5 }, { hour: 8, minute: 5 }, { hour: 9, minute: 6 }, { hour: 10, minute: 14 }, { hour: 11, minute: 0 }, { hour: 12, minute: 55 }, { hour: 13, minute: 45 }, { hour: 15, minute: 31 }, { hour: 16, minute: 30 }, { hour: 17, minute: 30 }, { hour: 18, minute: 18 }, { hour: 19, minute: 11 }]}
+]
+},
+{ name: 'Школа №3', latitudeBus: 55.1208, longitudeBus: 26.8145, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
+{ name: 'Fix Price', latitudeBus: 55.1204, longitudeBus: 26.8152, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
 { name: 'Суд', latitudeBus: 55.1076, longitudeBus: 26.8389, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
 { name: 'Гостиница', latitudeBus: 55.1074, longitudeBus: 26.8386, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
 { name: 'АТП №16 (на площадь)', latitudeBus: 55.1052, longitudeBus: 26.8386, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
@@ -115,6 +111,28 @@ routes: [
 },
 { name: 'Нотариальная контора', latitudeBus: 55.1102, longitudeBus: 26.8631, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] }
 ];
+function updateData() {
+if (navigator.geolocation) {
+// Включаем опцию высокой точности, чтобы геолокация лучше ловила перемещения
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback, { enableHighAccuracy: true });
+} else {
+alert("Geolocation is not supported by this browser.");
+}
+}
+function successCallback(position) {
+// Обязательно обновляем время при каждом автоматическом тике
+const newTime = new Date();
+currentHour = newTime.getHours();
+currentMinute = newTime.getMinutes();
+const latitude = Math.trunc(position.coords.latitude * 10000) / 10000;
+const longitude = Math.trunc(position.coords.longitude * 10000) / 10000;
+const foundObject = findObject(busStop, 'latitudeBus', latitude, 'longitudeBus', longitude);
+const tA = timeArrivalBus(foundObject, currentHour, currentMinute);
+objToDiv(tA);
+}
+function errorCallback(error) {
+console.warn("Ошибка геолокации при автообновлении: " + error.message);
+}
 function handleClick(event) {
 let parent = bus.parentNode;
 if (bus) parent.removeChild(bus);
@@ -122,15 +140,20 @@ if (nearestBus) {
 nearestBus.removeEventListener('click', handleClick);
 parent.removeChild(nearestBus);
 }
+updateData(); // Первое мгновенное обновление при клике на кнопку
+// ЗАПУСКАЕМ ТАЙМЕР: каждые 60 000 миллисекунд (60 секунд) функция будет вызываться сама
+setInterval(updateData, 60000);
+}
 function timeArrivalBus(array, hour, minute) {
 const arrivalTimeBus = [{name : array.name}];
+if (!array.routes) return arrivalTimeBus;
 for (let i = 0 ; i < array.routes.length; i++) {
 for (let j = 0 ; j < array.routes[i].timeHourMinute.length; j++) {
 if ( hour == array.routes[i].timeHourMinute[j].hour && (minute < array.routes[i].timeHourMinute[j].minute) ) {
 arrivalTimeBus.push({bus : array.routes[i].numberBus, minute : (array.routes[i].timeHourMinute[j].minute - minute)});
 break;
 } else if (hour < array.routes[i].timeHourMinute[j].hour) {
-arrivalTimeBus.push({bus : array.routes[i].numberBus, minute : ((60 - currentMinute) + array.routes[i].timeHourMinute[j].minute)});
+arrivalTimeBus.push({bus : array.routes[i].numberBus, minute : ((60 - minute) + array.routes[i].timeHourMinute[j].minute)});
 break;
 }
 }
@@ -151,47 +174,30 @@ closestObject = obj;
 });
 return closestObject;
 }
-function successCallback(position) {
-const latitude = Math.trunc(position.coords.latitude * 10000) / 10000;
-const longitude = Math.trunc(position.coords.longitude * 10000) / 10000;
-const foundObject = findObject(busStop, 'latitudeBus', latitude, 'longitudeBus', longitude);
-const tA = timeArrivalBus(foundObject, currentHour, currentMinute);
-objToDiv(tA);
-}
-if (navigator.geolocation) {
-navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-} else {
-alert("Geolocation is not supported by this browser.");
-}
-function errorCallback(error) {
-switch (error.code) {
-case error.PERMISSION_DENIED:
-alert("User denied the request for Geolocation.");
-break;
-case error.POSITION_UNAVAILABLE:
-alert("Location information is unavailable.");
-break;
-case error.TIMEOUT:
-alert("The request to get user location timed out.");
-break;
-case error.UNKNOWN_ERROR:
-alert("An unknown error occurred.");
-break;
-}
-}
-}
 function objToDiv(array) {
 const interactiveBlock = document.querySelector(".interactive-block");
 if (!interactiveBlock) return;
+// Очищаем блок перед отрисовкой новых минут или новой остановки
 interactiveBlock.innerHTML = "";
 interactiveBlock.style.backgroundColor = "white";
 const stopBusName = document.createElement('div');
 stopBusName.classList.add('stop-bus-name');
-stopBusName.textContent = array[0].name;
+stopBusName.textContent = array[0].name; // Исправлено: имя берем из первого элемента
 interactiveBlock.appendChild(stopBusName);
 const blockSceduleBuses = document.createElement('div');
 blockSceduleBuses.classList.add('block-scedule-buses');
 interactiveBlock.appendChild(blockSceduleBuses);
+// Если рейсов больше нет
+if (array.length === 1) {
+const noBuses = document.createElement('div');
+noBuses.style.textAlign = 'center';
+noBuses.style.padding = '20px 15px';
+noBuses.style.color = '#888';
+noBuses.style.fontSize = '16px';
+noBuses.textContent = 'Рейсов на сегодня больше нет';
+blockSceduleBuses.appendChild(noBuses);
+return;
+}
 for (var i = 1; i < array.length; i++) {
 const blockSceduleBus = document.createElement('div');
 blockSceduleBus.classList.add('block-scedule-bus');
@@ -233,7 +239,6 @@ const numBus = document.createElement('div');
 numBus.classList.add('num-bus');
 numBus.textContent = array[i].bus;
 numBusBlock.appendChild(numBus);
-  
 const timeBus = document.createElement('div');
 timeBus.classList.add('time-bus');
 timeBus.textContent = 'через: ' + array[i].minute + ' мин.';
@@ -243,10 +248,3 @@ blockSceduleBus.appendChild(timeBus);
 if (nearestBus) {
 nearestBus.addEventListener('click', handleClick);
 }
-
-
-
-
-
-
-
