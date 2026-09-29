@@ -429,6 +429,12 @@ function handleClick(event) {
   function timeArrivalBus(array, hour, minute) {
     
     const arrivalTimeBus = [{name : array.name}];
+
+     if (!array.routes) {
+        alert("У остановки " + array.name + " старый формат данных (нет массива routes)!");
+        return arrivalTimeBus; 
+
+    
         for (let i = 0 ; i < array.routes.length; i++) {
           for (let j = 0 ; j < array.routes[i].timeHourMinute.length; j++) {
                 if ( hour == array.routes[i].timeHourMinute[j].hour && (minute < array.routes[i].timeHourMinute[j].minute) ) {
