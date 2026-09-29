@@ -456,7 +456,7 @@ function handleClick(event) {
 
         if (totalDifference < minDifference) {
           minDifference = totalDifference;
-          findObject = obj;
+          closestObject = obj;
         }
     });
     return findObject;
