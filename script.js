@@ -327,89 +327,89 @@ const busStop = [
   
   ]}]},
 
-//   {name: 'Школа №3', latitudeBus: 55.1208, longitudeBus: 26.8145, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Fix Price', latitudeBus: 55.1204, longitudeBus: 26.8152, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Полевая', latitudeBus: 55.1222, longitudeBus: 26.8087, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Суд', latitudeBus: 55.1076, longitudeBus: 26.8389, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Гостиница', latitudeBus: 55.1074, longitudeBus: 26.8386, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'АТП №16 (на площадь)', latitudeBus: 55.1052, longitudeBus: 26.8386, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'АТП №16', latitudeBus: 55.1050, longitudeBus: 26.8383, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Больница', latitudeBus: 55.1035, longitudeBus: 26.8384, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Больница (на площадь)', latitudeBus: 55.1028, longitudeBus: 26.8387, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Сельхозтехника', latitudeBus: 55.1029, longitudeBus: 26.8452, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Мягкая жизнь (Гагарина)', latitudeBus: 55.1036, longitudeBus: 26.8455, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Кляро', latitudeBus: 55.1069, longitudeBus: 26.8458, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Стройтеплоком (Кларо)', latitudeBus: 55.1068, longitudeBus: 26.8458, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Средняя школа №2', latitudeBus: 55.1069, longitudeBus: 26.8502, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Средняя школа №2 (на Станкевича)', latitudeBus: 55.1068, longitudeBus: 26.8302, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Песочная', latitudeBus: 55.1068, longitudeBus: 26.8538, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Песочная(на Станкевича)', latitudeBus: 55.1066, longitudeBus: 26.8561, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Мелиоративная', latitudeBus: 55.1068, longitudeBus: 26.8624, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Мелиоративная(на Станкевича)', latitudeBus: 55.1070, longitudeBus: 26.8627, timeArrivalBus1: [
-//   { hour: 7, minute: 3 }
-// ]},
-//   {name: 'Средняя школа №1', latitudeBus: 55.1099, longitudeBus: 26.8628, timeArrivalBus1: [
+  {name: 'Школа №3', latitudeBus: 55.1208, longitudeBus: 26.8145, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Fix Price', latitudeBus: 55.1204, longitudeBus: 26.8152, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Полевая', latitudeBus: 55.1222, longitudeBus: 26.8087, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Суд', latitudeBus: 55.1076, longitudeBus: 26.8389, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Гостиница', latitudeBus: 55.1074, longitudeBus: 26.8386, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'АТП №16 (на площадь)', latitudeBus: 55.1052, longitudeBus: 26.8386, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'АТП №16', latitudeBus: 55.1050, longitudeBus: 26.8383, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Больница', latitudeBus: 55.1035, longitudeBus: 26.8384, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Больница (на площадь)', latitudeBus: 55.1028, longitudeBus: 26.8387, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Сельхозтехника', latitudeBus: 55.1029, longitudeBus: 26.8452, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Мягкая жизнь (Гагарина)', latitudeBus: 55.1036, longitudeBus: 26.8455, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Кляро', latitudeBus: 55.1069, longitudeBus: 26.8458, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Стройтеплоком (Кларо)', latitudeBus: 55.1068, longitudeBus: 26.8458, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Средняя школа №2', latitudeBus: 55.1069, longitudeBus: 26.8502, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Средняя школа №2 (на Станкевича)', latitudeBus: 55.1068, longitudeBus: 26.8302, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Песочная', latitudeBus: 55.1068, longitudeBus: 26.8538, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Песочная(на Станкевича)', latitudeBus: 55.1066, longitudeBus: 26.8561, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Мелиоративная', latitudeBus: 55.1068, longitudeBus: 26.8624, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Мелиоративная(на Станкевича)', latitudeBus: 55.1070, longitudeBus: 26.8627, timeArrivalBus1: [
+  { hour: 7, minute: 3 }
+]},
+  {name: 'Средняя школа №1', latitudeBus: 55.1099, longitudeBus: 26.8628, timeArrivalBus1: [
 
-//   { hour: 7, minute: 3 }], timeArrivalBus3: [
+  { hour: 7, minute: 3 }], timeArrivalBus3: [
 
-//   { hour: 7, minute: 1 },
-//   { hour: 7, minute: 26 },
-//   { hour: 7, minute: 51 },
-//   { hour: 8, minute: 26 },
-//   { hour: 8, minute: 46 },
-//   { hour: 9, minute: 21 },
-//   { hour: 9, minute: 46 },
-//   { hour: 10, minute: 10 },
-//   { hour: 11, minute: 1 },
-//   { hour: 12, minute: 21 },
-//   { hour: 12, minute: 36 },
-//   { hour: 13, minute: 11 },
-//   { hour: 13, minute: 36 },
-//   { hour: 14, minute: 1 },
-//   { hour: 14, minute: 26 },
-//   { hour: 15, minute: 1 },
-//   { hour: 15, minute: 21 },
-//   { hour: 16, minute: 51 },
-//   { hour: 17, minute: 11 },
-//   { hour: 17, minute: 41 },
-//   { hour: 18, minute: 1 }
-// ]},
+  { hour: 7, minute: 1 },
+  { hour: 7, minute: 26 },
+  { hour: 7, minute: 51 },
+  { hour: 8, minute: 26 },
+  { hour: 8, minute: 46 },
+  { hour: 9, minute: 21 },
+  { hour: 9, minute: 46 },
+  { hour: 10, minute: 10 },
+  { hour: 11, minute: 1 },
+  { hour: 12, minute: 21 },
+  { hour: 12, minute: 36 },
+  { hour: 13, minute: 11 },
+  { hour: 13, minute: 36 },
+  { hour: 14, minute: 1 },
+  { hour: 14, minute: 26 },
+  { hour: 15, minute: 1 },
+  { hour: 15, minute: 21 },
+  { hour: 16, minute: 51 },
+  { hour: 17, minute: 11 },
+  { hour: 17, minute: 41 },
+  { hour: 18, minute: 1 }
+]},
   {name: 'Нотариальная контора', latitudeBus: 55.1102, longitudeBus: 26.8631, timeArrivalBus1: [
   { hour: 7, minute: 3 }
 ]}];
