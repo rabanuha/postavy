@@ -73,7 +73,21 @@ const busStop = [
   },
 { name: 'Школа №3', latitudeBus: 55.1208, longitudeBus: 26.8145, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
 { name: 'Fix Price', latitudeBus: 55.1204, longitudeBus: 26.8152, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
-{ name: 'Полевая', latitudeBus: 55.1222, longitudeBus: 26.8087, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
+
+  { 
+    name: 'Полевая', 
+    latitudeBus: 55.1222, 
+    longitudeBus: 26.8087, 
+    routes : [
+      { numberBus : '1', timeHourMinute : [{ hour: 7, minute: 3 }, { hour: 7, minute: 33 }, { hour: 8, minute: 38 }, { hour: 8, minute: 58 }, { hour: 11, minute: 8 }, { hour: 11, minute: 33 }, { hour: 11, minute: 58 }, { hour: 12, minute: 28 }, { hour: 12, minute: 53 }, { hour: 13, minute: 48 }, { hour: 14, minute: 18 }, { hour: 15, minute: 13 }, { hour: 15, minute: 43 }, { hour: 16, minute: 33 }, { hour: 17, minute: 3 }, { hour: 17, minute: 23 }, { hour: 17, minute: 53 }, { hour: 18, minute: 13 }, { hour: 18, minute: 43 }]}, 
+      { numberBus : '3', timeHourMinute : [{ hour: 6, minute: 33 }, { hour: 7, minute: 23 }, { hour: 8, minute: 13 }, { hour: 8, minute: 48 }, { hour: 9, minute: 13 }, { hour: 9, minute: 43 }, { hour: 10, minute: 8 }, { hour: 10, minute: 28 }, { hour: 11, minute: 48 }, { hour: 12, minute: 43 }, { hour: 13, minute: 3 }, { hour: 13, minute: 30 }, { hour: 13, minute: 58 }, { hour: 14, minute: 28 }, { hour: 14, minute: 48 }, { hour: 15, minute: 22 }, { hour: 16, minute: 43 }, { hour: 17, minute: 13 }, { hour: 17, minute: 33 }, { hour: 18, minute: 3 }, { hour: 18, minute: 23 }]},
+      { numberBus : '3тк', timeHourMinute : [{ hour: 7, minute: 5 }, { hour: 8, minute: 5 }, { hour: 9, minute: 6 }, { hour: 10, minute: 14 }, { hour: 11, minute: 0 }, { hour: 12, minute: 55 }, { hour: 13, minute: 45 }, { hour: 15, minute: 31 }, { hour: 16, minute: 30 }, { hour: 17, minute: 30 }, { hour: 18, minute: 18 }, { hour: 19, minute: 11 }]},
+      { numberBus : '1тк', timeHourMinute : [{ hour: 7, minute: 3 }, { hour: 7, minute: 5 }, { hour: 8, minute: 5 }, { hour: 9, minute: 6 }, { hour: 10, minute: 14 }, { hour: 11, minute: 0 }, { hour: 12, minute: 55 }, { hour: 13, minute: 45 }, { hour: 15, minute: 31 }, { hour: 16, minute: 30 }, { hour: 17, minute: 30 }, { hour: 18, minute: 18 }, { hour: 19, minute: 11 }]}
+    ]
+  }, 
+
+
+  
 { name: 'Суд', latitudeBus: 55.1076, longitudeBus: 26.8389, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
 { name: 'Гостиница', latitudeBus: 55.1074, longitudeBus: 26.8386, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
 { name: 'АТП №16 (на площадь)', latitudeBus: 55.1052, longitudeBus: 26.8386, routes: [{ numberBus: '1', timeHourMinute: [{ hour: 7, minute: 3 }] }] },
